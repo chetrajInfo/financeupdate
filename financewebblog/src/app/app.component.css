@@ -197,3 +197,56 @@ aside img{
  .item li:last-child {
     margin-bottom: 0;
   }
+
+  .note{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+    background-color: antiquewhite;
+  }
+
+  footer{
+    height: 200px;
+    border-style: solid; /* You can use other styles such as 'dashed', 'dotted', etc. */
+    border-width: 9px 0; /* The first value sets the top and bottom border width, the second sets the left and right border width */
+    border-color:aliceblue;
+    margin-top:15px;
+    display: flex;
+    flex: content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:40px;
+  }
+  .contact{
+    padding:170px 0 0 0;
+  }
+  .info{
+  margin-top:20px;
+  position: relative;
+  }
+  .name{
+    position: absolute;
+    margin:90px 0 0  130px;
+    z-index: 1;
+  }
+  .newsLink{
+  position: absolute;
+  margin:20px 0 0 1120px;;
+  display: block;
+
+  }
+.linkMe{
+  padding-top:9px;
+  text-decoration: underline;
+}
+.tradingview-widget-container {
+  width: 100%;
+  height: 600px; 
+  margin: 0 auto; 
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#tradingview_1f196 {
+  width: 100%;
+  height: 100%;
+}
