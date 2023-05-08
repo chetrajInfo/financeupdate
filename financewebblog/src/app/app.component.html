@@ -23,6 +23,21 @@
   </ul>
 </nav>
 
+<div class="currency">
+<ul>
+  <li *ngFor="let currency of currencies">
+    {{ currency }}:
+    <ng-container *ngIf="currencyData[currency] !== undefined">
+      {{ currencyData[currency] }}
+    </ng-container>
+    <ng-container *ngIf="currencyData[currency] === undefined">
+      Retrieving data...
+    </ng-container>
+  </li>
+</ul>
+</div>
+
+
 <div class="container">
   <div class="paragraph-box">
   <span class="topicStyle"> Investing: Unlock the Power of Compound Interest</span>

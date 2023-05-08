@@ -37,7 +37,7 @@ nav{
 ul{
     display: flex;
     flex-direction: row;
-    gap:60px;
+    gap:40px;
     list-style: none;
     padding-top: 15px;
     margin: 0 0 0 3px;
@@ -57,7 +57,7 @@ a{
 a:hover{
    letter-spacing: 1px;
    font:rgb(1, 1, 39);
-   
+   color:rgb(7, 106, 7);
 }
 .tdate{
     padding:53px 0 0 300px;
@@ -116,11 +116,11 @@ section{
 }
 aside{
     position: absolute;
-    top: 190px;
+    top: 260px;
     right: 5px;
 }
 aside img{
-    height: 442px;
+    height: 412px;
     width: 320px;
 }
 .invest{
@@ -259,4 +259,27 @@ label{
   height:40px;
   width: 40px;
   margin-left: 3px;
+}
+
+.currency{
+  color:midnightblue;
+  cursor: pointer;
+
+}
+.currency ul{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  list-style: none;
+  padding-top: 15px;
+  margin: 0 0 0 3px;
+ 
+}
+ .currency li{
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(240, 237, 234);
+  padding: 15px;
+  border: 1px solid gray;
 }
