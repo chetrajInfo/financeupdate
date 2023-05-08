@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { format, addDays, differenceInDays } from 'date-fns';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -43,9 +45,6 @@ export class AppComponent {
 
   updateCurrentTime() {
     this.currentTime = format(new Date(), 'Pp');
-  }
-
-
-  
+  } 
   
 }

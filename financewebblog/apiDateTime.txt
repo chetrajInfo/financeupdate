@@ -1,0 +1,106 @@
+To work with date and time in an Angular application, you can use the popular library called date-fns. It is a lightweight and modular library that provides various utility functions for manipulating dates in a more human-readable format.
+
+First, you'll need to install the library:
+
+npm install date-fns
+
+Next, you can import the required functions in your Angular component or service:
+
+
+import { format, addDays, differenceInDays } from 'date-fns';
+Here's an example of how you can use date-fns in an Angular component:
+
+
+import { Component } from '@angular/core';
+import { format, addDays, differenceInDays } from 'date-fns';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <p>Today's date: {{ today }}</p>
+    <p>Date after 10 days: {{ dateAfterTenDays }}</p>
+    <p>Difference in days: {{ daysDifference }} days</p>
+  `,
+})
+export class AppComponent {
+  today: string;
+  dateAfterTenDays: string;
+  daysDifference: number;
+
+  constructor() {
+    const currentDate = new Date();
+    this.today = format(currentDate, 'PPPP');
+    this.dateAfterTenDays = format(addDays(currentDate, 10), 'PPPP');
+    this.daysDifference = differenceInDays(addDays(currentDate, 10), currentDate);
+  }
+}
+In this example, we display today's date, the date after 10 days, and the difference in days using date-fns utility functions.
+
+You can find more information about date-fns and its available functions in the official documentation: https://date-fns.org/docs/Getting-Started
+
+
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { format, addDays, differenceInDays } from 'date-fns';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <p>Current date and time with ticking seconds: {{ currentTime }}</p>
+    <p>Date and time after 10 days: {{ dateAfterTenDays }}</p>
+    <p>Difference in days: {{ daysDifference }} days</p>
+  `,
+})
+export class AppComponent implements OnInit, OnDestroy {
+  currentTime: string;
+  dateAfterTenDays: string;
+  daysDifference: number;
+  timer: any;
+
+  ngOnInit() {
+    const currentDate = new Date();
+    this.updateCurrentTime();
+    this.dateAfterTenDays = format(addDays(currentDate, 10), 'Pp');
+    this.daysDifference = differenceInDays(addDays(currentDate, 10), currentDate);
+
+    // Update the time every second (1000ms)
+    this.timer = setInterval(() => {
+      this.updateCurrentTime();
+    }, 1000);
+  }
+
+  ngOnDestroy() {
+    // Clear the interval when the component is destroyed
+    clearInterval(this.timer);
+  }
+
+  updateCurrentTime() {
+    this.currentTime = format(new Date(), 'Pp');
+  }
+}
+
+
+******************************************************************************************************
+******************************************************************************************************
+
+When you install a package or library using npm (Node Package Manager) in an Angular project, the package is saved in the node_modules folder located in your project root directory. This folder contains all the third-party libraries and packages that your Angular application depends on.
+
+For example, if you installed date-fns using:
+
+lua
+Copy code
+npm install date-fns
+You can find the installed package inside the node_modules folder:
+
+css
+Copy code
+your-project-root/
+  ├─ node_modules/
+  │   ├─ ...
+  │   ├─ date-fns/
+  │   │   ├─ ...
+  │   ├─ ...
+  ├─ src/
+  ├─ ...
+
+******************************************************************************************************
+******************************************************************************************************
