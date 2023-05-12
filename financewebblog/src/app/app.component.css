@@ -230,10 +230,10 @@ aside img{
   }
   .name{
     position: absolute;
-    margin:90px 0 0  130px;
+    margin:90px 0 0  160px;
     z-index: 1;
     font-family: 'Courier', monospace;/* This font looks like computer type*/
-    font-size: 19px;
+    font-size: 16px;
   }
   .newsLink{
   position: absolute;
@@ -247,12 +247,18 @@ aside img{
 }
 .finance{
   position: absolute;
-  margin:20px 0 0 800px;
+  margin:20px 0 0 870px;
   display: block;
 }
 label{
   font-size: large;
   font-weight: bold;
+}
+
+.tradingAc{
+  position: absolute;
+  margin:20px 0 0 575px;
+  display: block;
 }
 
 .contact img{
@@ -282,4 +288,11 @@ label{
   background-color: rgb(240, 237, 234);
   padding: 15px;
   border: 1px solid gray;
+}
+
+footer img{
+  padding: 2px 0 0 9px;
+  height:170px;
+  width: 150px;
+  border-radius: 10px;
 }
